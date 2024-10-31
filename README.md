@@ -20,7 +20,7 @@ After creating eight scatter plots to show linear regression for each of the fou
 
 # Results and Analysis
 
-The only weather data variables with a very strong correlation was latitude and tempature in the northern hemisphere. Latitude and tempature in the southern hemisphere was moderate. For all other variables compared with latitude (humidity, cloudiness and windspeed), the correlation was very weak (and perhaps none).
+The only weather data variables with a very strong correlation was latitude and tempature in the northern hemisphere. Latitude and tempature correlation in the southern hemisphere was moderate. For all other variables compared with latitude (humidity, cloudiness and windspeed), the correlation was very weak (and perhaps none). These results provide evidence that a location's proximity to the equator does indeed have a strong effect on its temperature. 
 
 # Challenges
 
