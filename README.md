@@ -29,13 +29,17 @@ The task that challenged me the most in this activity was just making sure that 
 # VacationPy
 
 ## Goals
-
+In this part of the challenge, I use the Geoapify API and an assortment of Python libraries to create three maps: a map that displays all cities in the city_data_df DataFrame, a map that displays a much smaller group of cities that meet my ideal weather conditions, and a map that display a hotel and country name as additional informaiton in a hover message.
 
 ## Methodology
+I first made sure to update my API key. After running the starter code to create a city_data_df, I used the hv.plot.points function to create a map of the cities in the data frame. 
 
+Then, I used logical operators to find cities that had a max temp between 22 and 30 degrees C, Wind Speeds between 4 and 24 m/h, and Humidity between 30 and 60. This new DataFrame returned 11 cities that met my ideal vacation weather criteria. I then created a second map to visualize these locations. 
+
+Finally, I created a third DataFrame to store city, country, coordinates, humidity and hotel name for each of the 11 cities. I then modified the starter code and used the Geoapify API in an iteration to find the first hotel located within 10,000 meters of the coordinates for each of the 11 cities. Finally, I created a third map visulazation that added the hotel and country name to the hover message for each city in the map.
 
 ## Results and Analysis
-
+The most interesting results of this challenge was narrowing down the city_data to 11 "ideal weather" locations. I found that the majority of cities in that particular set were located around the Atlantic Ocean. The hotel search found hotels for all but three of the cities. Perhaps these are very small or rural locations - more research would be needed to find out why there were no hotels nearby.
 
 ## Challenges
-
+My two primary challenges were configuring the API correctly to return hotel names for the small group of cities and importing the correct modules for map visualization. The first part of the API issue was simply a matter of correctly updating my .gitignore file and putting the api_keys file in the project folder. The second part was a matter of correcting my iteration through the hotel_df DataFrame to iterate through rows for "Lat" and "Lng" values. A BCS Learning Assistant helped me to import the cartopy, geoviews, and pyproj modules that I needed for visualizations.
