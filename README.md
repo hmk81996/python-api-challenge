@@ -22,6 +22,16 @@ After creating eight scatter plots to show linear regression for each of the fou
 
 The only weather data variables with a very strong correlation was latitude and tempature in the northern hemisphere. Latitude and tempature correlation in the southern hemisphere was moderate. For all other variables compared with latitude (humidity, cloudiness and windspeed), the correlation was very weak (and perhaps none). These results provide evidence that a location's proximity to the equator does indeed have a strong effect on its temperature. 
 
+**Stronger correlation**
+
+![Max latitude vs temperature](WeatherPy/output_data/Fig1.png)
+
+**Weaker correlation**
+
+![Max latitude vs humidity](WeatherPy/output_data/Fig2.png)
+
+![Max latitude vs windspeed](WeatherPy/output_data/Fig4.png)
+
 ## Challenges
 
 The task that challenged me the most in this activity was just making sure that my api_keys and .gitignore were set up correctly. Initial errors when I was generating the random list of cities momentarily impeded the rest of the project. This project was a good reminder of how to create a function (linear regression being a pretty complex one) that I can repeatedly call as well as how to identify important variables (like the r^2 valueable) within that function to use for additional analysis. I ran into issues with two variables: Wind Speed and Tempature. For Wind Speed, my original variable didn't recognize that there were three values being returned so I had to add further index it for "speed". When my temperature data was being returned in Kelvins, I remembered to add "&units=metric" to my endpoint URL.
@@ -40,6 +50,13 @@ Finally, I created a third DataFrame to store city, country, coordinates, humidi
 
 ## Results and Analysis
 The most interesting results of this challenge was narrowing down the city_data to 11 "ideal weather" locations. I found that the majority of cities in that particular set were located around the Atlantic Ocean. The hotel search found hotels for all but three of the cities. Perhaps these are very small or rural locations - more research would be needed to find out why there were no hotels nearby.
+
+**Every city in dataset (marker size determined by humidity)**
+![Max latitude vs windspeed](VacationPy/output_data/city_data.png)
+
+**Eleven cities that meet my 'ideal vacation conditions'**
+![Max latitude vs windspeed](VacationPy/output_data/map_plot_3.png)
+
 
 ## Challenges
 My two primary challenges were configuring the API correctly to return hotel names for the small group of cities and importing the correct modules for map visualization. The first part of the API issue was simply a matter of correctly updating my .gitignore file and putting the api_keys file in the project folder. The second part was a matter of correcting my iteration through the hotel_df DataFrame to iterate through rows for "Lat" and "Lng" values. A BCS Learning Assistant helped me to import the cartopy, geoviews, and pyproj modules that I needed for visualizations.
