@@ -1,4 +1,5 @@
-# python-api-challenge
+# weather-mapping
+Python Visualization - Data Visualization Course Module 6
 
 # WeatherPy
 
